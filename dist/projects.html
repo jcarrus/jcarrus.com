@@ -1,0 +1,5 @@
+<script>function copyHandler(id) { 
+  const e = document.getElementById(`${id}-copy-alert`)
+  e.classList.remove('hidden')
+  setTimeout(() => e.classList.add('hidden'), 3000)
+}</script><div class="item"><h3 class="title" id="infocycle">InfoCycle - Ford Motor Company<span class="clip" data-clipboard-text="http://localhost:8080/#infocycle"><img class="icon" src="/assets/link.svg" onclick="copyHandler('infocycle')"/><span class="copy-alert hidden" id="infocycle-copy-alert">Copied!</span></span></h3><img class="hero" src="/assets/infocycle.jpg"/><p>The InfoCycle is a fork-mounted bicycle sensor that collects information about cyclists, congestion, and road conditions which can then be used to inform other cyclists, drivers, and city planners about mobility within a city. A central goal of the project was to exclusively use off-the-shelf components and hobby-grade 3D printing in order to make the design accessible to individuals. <a target="_blank" href="https://media.ford.com/content/fordmedia/fna/us/en/news/2015/01/06/mobility-experiment-info-cycle-palo-alto-california.html">Press release.</a></p></div>

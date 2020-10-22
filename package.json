@@ -1,0 +1,26 @@
+{
+  "name": "jcarrus.github.io",
+  "version": "1.0.0",
+  "description": "Justin's Website",
+  "main": "none",
+  "scripts": {
+    "build": "sass ./src/*.sass ./dist/style.css && pug src --out dist",
+    "serve": "http-server dist/",
+    "watch": "nodemon -w ./src/ -e pug,sass -x 'npm run build && npm run serve'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcarrus/jcarrus.github.io.git"
+  },
+  "author": "Justin Carrus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcarrus/jcarrus.github.io/issues"
+  },
+  "homepage": "https://github.com/jcarrus/jcarrus.github.io#readme",
+  "devDependencies": {
+    "http-server": "^0.12.3",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.27.0"
+  }
+}

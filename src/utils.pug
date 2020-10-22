@@ -1,0 +1,13 @@
+script
+  | function copyHandler(id) { 
+  |   const e = document.getElementById(`${id}-copy-alert`)
+  |   e.classList.remove('hidden')
+  |   setTimeout(() => e.classList.add('hidden'), 3000)
+  | }
+  
+
+mixin title(id, displayText)
+  h3.title(id=id)= displayText
+    span.clip(data-clipboard-text=`http://localhost:8080/#${id}`)
+      img.icon(src='/assets/link.svg', onclick=`copyHandler('${id}')`)
+      span.copy-alert.hidden(id=`${id}-copy-alert`) Copied!

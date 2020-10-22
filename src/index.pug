@@ -1,0 +1,40 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='description', content='Justin Carrus\'s Personal Website')
+    title Justin Carrus Personal Website
+    link(rel='stylesheet', href='/style.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;700&display=swap')
+  body
+    main(class='page')
+      img.profile-pic(width='300' height='300' src='/assets/profile.jpg' alt='Photo of Justin Carrus')
+      h1.center Justin Carrus
+      .intro
+        p
+          | I'm an all-around techie with a past in software, ocean engineering, and international development. I&apos;m currently working to revolutionize manufacturing through accessible technology at 
+          a(href='https://tulip.co') Tulip
+          | .
+        p
+          | This site is in its early stages, but will become a collection of 
+          a(href='#reading-list') writing/media I'd recommend
+          | , 
+          a(href='#stuff-i-like') stuff I like
+          | , and 
+          a(href='#projects') projects I've worked on
+          |. If you have recommendations or questions, feel free to 
+          a(href='mailto:carrus.justin@gmail.com') reach out
+          | .
+      h2#reading-list Reading List
+      div
+        include reading-list.pug
+      h2#stuff-i-like Stuff I Like
+      div
+        include stuff-i-like.pug
+      h2#projects Projects
+      div
+        include projects.pug
+    script(src='/clipboard.min.js')
+    script new ClipboardJS('.clip');
