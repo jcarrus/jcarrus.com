@@ -1,13 +1,8 @@
-script
-  | function copyHandler(id) { 
-  |   const e = document.getElementById(`${id}-copy-alert`)
-  |   e.classList.remove('hidden')
-  |   setTimeout(() => e.classList.add('hidden'), 3000)
-  | }
-  
-
 mixin title(id, displayText)
   h3.title(id=id)= displayText
-    span.clip(data-clipboard-text=`http://localhost:8080/#${id}`)
-      img.icon(src='/assets/link.svg', onclick=`copyHandler('${id}')`)
+    span.clip(data-clipboard-text=`https://jcarrus.com/#${id}`)
+      img.icon(src='/assets/link.svg', onclick=`copyHandler('${id}')`, title='Copy a link to this item', alt='Link icon to copy a link to this item')
       span.copy-alert.hidden(id=`${id}-copy-alert`) Copied!
+
+mixin link(href, displayText)
+  a(target='_blank', rel='noopener', href=href, onclick=`track('${href}')`)= displayText

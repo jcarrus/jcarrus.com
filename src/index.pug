@@ -13,28 +13,43 @@ html(lang='en')
       img.profile-pic(width='300' height='300' src='/assets/profile.jpg' alt='Photo of Justin Carrus')
       h1.center Justin Carrus
       .intro
-        p
-          | I'm an all-around techie with a past in software, ocean engineering, and international development. I&apos;m currently working to revolutionize manufacturing through accessible technology at 
-          a(href='https://tulip.co') Tulip
-          | .
-        p
-          | This site is in its early stages, but will become a collection of 
-          a(href='#reading-list') writing/media I'd recommend
-          | , 
-          a(href='#stuff-i-like') stuff I like
-          | , and 
-          a(href='#projects') projects I've worked on
-          |. If you have recommendations or questions, feel free to 
-          a(href='mailto:carrus.justin@gmail.com') reach out
-          | .
-      h2#reading-list Reading List
+        p I'm an all-around techie with a past in software, ocean engineering, and international development. I'm currently working to revolutionize manufacturing through accessible technology at #[a(href='https://tulip.co') Tulip].
+        p This site is in its early stages, but will become a collection of
+        ul
+          li #[a(href='#reading-list') writing/media I'd recommend],
+          li #[a(href='#stuff-i-like') stuff I like], and
+          li #[a(href='#projects') projects I've worked on]
+        | If you have recommendations or questions, feel free to #[a(href='mailto:carrus.justin@gmail.com') reach out].
+      h2.section#reading-list Reading List / Media
       div
         include reading-list.pug
-      h2#stuff-i-like Stuff I Like
+      h2.section#stuff-i-like Stuff I Like
       div
         include stuff-i-like.pug
-      h2#projects Projects
+      h2.section#projects Projects
       div
         include projects.pug
     script(src='/clipboard.min.js')
     script new ClipboardJS('.clip');
+    script(async src="https://www.googletagmanager.com/gtag/js?id=UA-43008439-4")
+    script(src='/lazysizes.min.js' async)
+    script
+      | window.dataLayer = window.dataLayer || [];
+      | function gtag(){dataLayer.push(arguments);}
+      | gtag('js', new Date());
+      | gtag('config', 'UA-43008439-4');
+      |
+      | function track(label) {
+      |   if(window.location.protocol === 'https:') {
+      |     gtag('event', 'click', { event_category: 'engagement', event_label: label })
+      |   }
+      | }
+      | 
+      | function copyHandler(id) { 
+      |   const e = document.getElementById(`${id}-copy-alert`)
+      |   e.classList.remove('hidden')
+      |   setTimeout(() => e.classList.add('hidden'), 3000)
+      |   track(id)
+      | }
+  
+

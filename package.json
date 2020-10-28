@@ -1,24 +1,24 @@
 {
-  "name": "jcarrus.github.io",
+  "name": "jcarrus.com",
   "version": "1.0.0",
   "description": "Justin's Website",
   "main": "none",
   "scripts": {
-    "build": "sass ./src/*.sass ./dist/style.css && pug src --out dist",
+    "build": "sass ./src/*.sass ./dist/style.css && pug src/index.pug --out dist",
     "serve": "http-server dist/",
     "watch": "nodemon -w ./src/ -e pug,sass -x 'npm run build && npm run serve'",
     "publish": "aws --profile=mojo s3 sync ./dist s3://www.jcarrus.com --delete"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jcarrus/jcarrus.github.io.git"
+    "url": "git+https://github.com/jcarrus/jcarrus.com.git"
   },
   "author": "Justin Carrus",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jcarrus/jcarrus.github.io/issues"
+    "url": "https://github.com/jcarrus/jcarrus.com/issues"
   },
-  "homepage": "https://github.com/jcarrus/jcarrus.github.io#readme",
+  "homepage": "https://jcarrus.com",
   "devDependencies": {
     "http-server": "^0.12.3",
     "pug-cli": "^1.0.0-alpha6",
