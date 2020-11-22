@@ -36,8 +36,10 @@ html(lang='en')
     script
       | window.dataLayer = window.dataLayer || [];
       | function gtag(){dataLayer.push(arguments);}
-      | gtag('js', new Date());
-      | gtag('config', 'UA-43008439-4');
+      | if (window.location.protocol === 'https:') {
+      |   gtag('js', new Date());
+      |   gtag('config', 'UA-43008439-4');
+      | }
       |
       | function track(label) {
       |   if(window.location.protocol === 'https:') {
@@ -51,5 +53,3 @@ html(lang='en')
       |   setTimeout(() => e.classList.add('hidden'), 3000)
       |   track(id)
       | }
-  
-
