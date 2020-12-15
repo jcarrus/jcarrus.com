@@ -6,3 +6,9 @@ mixin title(id, displayText)
 
 mixin link(href, displayText)
   a(target='_blank', rel='noopener', href=href, onclick=`track('${href}')`)= displayText
+
+mixin highlights
+  details
+    summary Highlights
+    ul
+      block
