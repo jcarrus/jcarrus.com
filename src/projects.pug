@@ -1,6 +1,16 @@
 include utils
 
 .item
+  +title('buckets', 'Buckets', 'Personal Project')
+  .tag.project
+  img.hero.lazyload(data-src='/assets/buckets.webp', alt='A landing page for the Buckets project')
+  p After being frustrated with personal finance tracking tools like Mint.com and Personal Capital, I rolled a personal finance tracking app of my own: #[+link('https://buckets-5b87d.web.app/', 'Buckets')]. Users track spending by categorizing transactions into different "buckets" (or budgets). Buckets allows users to create their own budgets and choose whether or not the budget should be associated with a time period (weekly, monthy, etc.). Finally, a simple sorting interface allows users to quickly review and sort each transaction.
+  video.hero(controls, playsinline, preload='none', poster='/assets/buckets-demo-poster.webp')
+    source.hero(src='/assets/buckets-demo.webm', type='video/webm', alt='A video showing the Buckets personal finance tracking app')
+    source.hero(src='/assets/buckets-demo.mp4', type='video/mp4', alt='A video showing the Buckets personal finance tracking app')
+  p The project uses Vue.js as the frontend framework, Vuetify for most of the UI components, Firebase's Realtime Database as the datastore, and Firebase's Cloud Functions for connecting to Plaid, a fintech service that pulls transactions from banks.
+
+.item
   +title('brickpress', 'ARC Bricks', 'Precision Engineering and Research Group, MIT')
   .tag.project
   img.hero.lazyload(data-src='/assets/arc-bricks.webp', alt='A small wall made of ARC bricks')
