@@ -1,3 +1,6 @@
+mixin chip(id, displayText)
+  .chip(id=id, onclick='onChipClick("'+id+'")')= displayText
+
 mixin title(id, title, author)
   h3.title(id=id)= title
     span.clip(data-clipboard-text=`https://jcarrus.com/#${id}`)
