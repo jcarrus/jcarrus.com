@@ -11,17 +11,16 @@ html(lang='en')
     link(rel='stylesheet', href='/style.css')
     link(rel='stylesheet', href='https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;700&display=swap')
   body
-    main(class='page')
+    main.page
       img#profile-pic(width='300' height='300' src='/assets/profile.jpg' alt='Photo of Justin Carrus')
       h1.center Justin Carrus
-      .intro
-        p Welcome! I love thoughtful products, people on a mission, and the magic of technology. I've made this site as a list of
-        ul
-          li #[a(href='#projects') projects I've worked on],
-          li #[a(href='#reading-list') writing/media I've enjoyed], and
-          li #[a(href='#stuff-i-like') stuff I like]
-        p I really enjoy personal websites that offer glimpses into the lives of others and this is my attempt at such a portrait.
-        p If you have recommendations or questions, feel free to #[a(href='mailto:carrus.justin@gmail.com') reach out].
+      p Welcome! I love thoughtful products, people on a mission, and the magic of technology. I've made this site as a list of
+      ul
+        li #[a(href='#projects') projects I've worked on],
+        li #[a(href='#reading-list') writing/media I've enjoyed], and
+        li #[a(href='#stuff-i-like') stuff I like]
+      p I really enjoy personal websites that offer glimpses into the lives of others and this is my attempt at such a portrait.
+      p If you have recommendations or questions, feel free to #[a(href='mailto:carrus.justin@gmail.com') reach out].
       .filters
         input#filterText(oninput='filter()', placeholder='Filter items...')
         .chips
