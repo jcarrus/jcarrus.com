@@ -4,9 +4,14 @@
   "description": "Justin's Website",
   "main": "none",
   "scripts": {
-    "build": "sass ./src/*.sass ./dist/style.css && pug src/index.pug --out dist",
-    "serve": "http-server dist/",
-    "watch": "nodemon -w ./src/ -e pug,sass -x 'npm run build && npm run serve'",
+    "clean": "rm ./dist/*.html ./dist/**/*.html ./dist/*.css ./dist/*.map || :",
+    "sass": "sass ./src/*.sass ./dist/style.css",
+    "sass:watch": "npm run sass -- --watch",
+    "pug": "pug --out dist --basedir src src",
+    "pug:watch": "npm run pug -- --watch",
+    "build": "npm run sass && npm run pug",
+    "serve": "live-server --no-css-inject dist/",
+    "watch": "npm run sass:watch & npm run pug:watch & npm run serve",
     "publish": "aws --profile=mojo s3 sync ./dist s3://www.jcarrus.com --delete",
     "invalidate": "aws --profile=mojo cloudfront create-invalidation --distribution-id E5T5X67T0T5CH --paths '/index.html' '/style.css'"
   },
@@ -21,8 +26,8 @@
   },
   "homepage": "https://jcarrus.com",
   "devDependencies": {
-    "http-server": "^0.12.3",
-    "pug-cli": "^1.0.0-alpha6",
-    "sass": "^1.27.0"
+    "live-server": "^1.2.1",
+    "pug-cli": "git+https://github.com/pugjs/pug-cli.git",
+    "sass": "^1.32.4"
   }
 }

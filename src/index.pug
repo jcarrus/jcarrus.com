@@ -1,4 +1,4 @@
-include utils
+include /_utils
 
 doctype html
 html(lang='en')
@@ -12,7 +12,7 @@ html(lang='en')
     link(rel='stylesheet', href='https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;700&display=swap')
   body
     main(class='page')
-      img.profile-pic(width='300' height='300' src='/assets/profile.jpg' alt='Photo of Justin Carrus')
+      img#profile-pic(width='300' height='300' src='/assets/profile.jpg' alt='Photo of Justin Carrus')
       h1.center Justin Carrus
       .intro
         p Welcome! I love thoughtful products, people on a mission, and the magic of technology. I've made this site as a list of
@@ -37,15 +37,15 @@ html(lang='en')
         .section
           h2#projects Projects
           div
-            include projects.pug
+            include _projects.pug
         .section
           h2#reading-list Reading List / Media
           div
-            include reading-list.pug
+            include _reading-list.pug
         .section
           h2#stuff-i-like Stuff I Like
           div
-            include stuff-i-like.pug
+            include _stuff-i-like.pug
         #empty-state.hidden
           .empty-state No results. Try removing some filters.
     script(src='/clipboard.min.js')

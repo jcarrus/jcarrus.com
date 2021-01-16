@@ -1,3 +1,25 @@
+.sans
+  font-family: 'Lato', sans-serif
+
+.serif
+  font-family: 'Crimson Text', serif
+
+.bold
+  font-weight: 700
+
+.center
+  text-align: center
+
+.nostyle
+  color: black
+  text-decoration: none
+
+.hidden
+  display: none
+
+.full-width
+  width: 100%
+
 body
   font-family: 'Crimson Text', serif
   font-size: 1.25em
@@ -6,19 +28,19 @@ body
 h1, h2, h3, h4, h5, h6
   font-family: 'Lato', sans-serif
   font-weight: 300
-  margin-top: 2em
+  margin-top: 0.5em
+  margin-bottom: 0
 
-.center
-  text-align: center
+img
+  display: block
+  margin: 1rem auto
+  width: 100%
+  &.icon
+    display: inline
+    width: 0.8em
+    margin: 0 .5rem
+    opacity: 0.5
 
-nav
-  border-bottom: 1px solid #dadce0
-  font-size: 1rem
-
-  a
-    text-decoration: none
-    color: black
-  
 .page
   width: 100%
   max-width: 800px
@@ -27,31 +49,6 @@ nav
   display: flex
   flex-direction: column
 
-img
-  display: block
-  margin: 1rem auto
-  width: 100%
-  
-  &.profile-pic
-    max-width: 300px
-    border-radius: 50%
-    
-.item
-  .title
-    font-weight: 700
-  h3 + h4
-    margin-top: -1rem
-  h3 + p
-    margin-top: -1rem
-  h4 + p
-    margin-top: -1rem
-  .hero
-    width: 100%
-  img.icon
-    display: inline
-    width: 0.8em
-    margin: 0 .5rem
-    opacity: 0.5
 
 .clip
   position: relative
@@ -66,10 +63,6 @@ img
   .hidden
     opacity: 0
     
-.nostyle
-  color: black
-  text-decoration: none
-
 .chips
   width: 70%
   min-width: 300px
@@ -91,6 +84,16 @@ img
   &.active
     background-color: #ababab
 
+.section, .item
+  margin-top: 2em
+
+.tag
+  display: none
+
+.filters
+  display: flex
+  flex-direction: column
+
 #filterText
   width: 70%
   min-width: 300px
@@ -102,19 +105,13 @@ img
   &:focus
     outline: none
 
-.hidden
-  display: none
-
-.tag
-  display: none
-
-.filters
-  display: flex
-  flex-direction: column
-
 #empty-state
   display: flex
   justify-content: center
   margin: 2rem
   &.hidden
     display: none
+
+#profile-pic
+  max-width: 300px
+  border-radius: 50%

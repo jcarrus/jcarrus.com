@@ -1,34 +1,34 @@
-include utils
+include _utils
 
 .item
   +title('buckets', 'Buckets', 'Personal Project')
   .tag.project
-  img.hero.lazyload(data-src='/assets/buckets.webp', alt='A landing page for the Buckets project')
+  img.full-width.lazyload(data-src='/assets/buckets.webp', alt='A landing page for the Buckets project')
   p After being frustrated with personal finance tracking tools like Mint.com and Personal Capital, I rolled a personal finance tracking app of my own: #[+link('https://buckets-5b87d.web.app/', 'Buckets')]. Users track spending by categorizing transactions into different "buckets" (or budgets). Buckets allows users to create their own budgets and choose whether or not the budget should be associated with a time period (weekly, monthy, etc.). Finally, a simple sorting interface allows users to quickly review and sort each transaction.
-  video.hero(controls, playsinline, preload='none', poster='/assets/buckets-demo-poster.webp')
-    source.hero(src='/assets/buckets-demo.webm', type='video/webm', alt='A video showing the Buckets personal finance tracking app')
-    source.hero(src='/assets/buckets-demo.mp4', type='video/mp4', alt='A video showing the Buckets personal finance tracking app')
+  video.full-width(controls, playsinline, preload='none', poster='/assets/buckets-demo-poster.webp')
+    source.full-width(src='/assets/buckets-demo.webm', type='video/webm', alt='A video showing the Buckets personal finance tracking app')
+    source.full-width(src='/assets/buckets-demo.mp4', type='video/mp4', alt='A video showing the Buckets personal finance tracking app')
   p The project uses Vue.js as the frontend framework, Vuetify for most of the UI components, Firebase's Realtime Database as the datastore, and Firebase's Cloud Functions for connecting to Plaid, a fintech service that pulls transactions from banks.
 
 .item
   +title('brickpress', 'ARC Bricks', 'Precision Engineering and Research Group, MIT')
   .tag.project
-  img.hero.lazyload(data-src='/assets/arc-bricks.webp', alt='A small wall made of ARC bricks')
+  img.full-width.lazyload(data-src='/assets/arc-bricks.webp', alt='A small wall made of ARC bricks')
   p ARC bricks are accurate, reversible, and can be used to create curved structures. The brick shape and press were designed for my #[+link('https://dspace.mit.edu/handle/1721.1/118741', 'Master\'s thesis')] with the goal of lowering the cost of house construction in developing areas where auto-construction (the act of building one's own home) is common. In these settings, reducing the amount of cement consumed is important as it is expensive and logistically difficult to acquire in rural regions without personal transporation.
-  video.hero(autoplay, loop, muted, playsinline)
-    source.hero(src='/assets/brick-ejection.webm', type='video/webm', alt='A video showing the brick being ejected from the press')
-    source.hero(src='/assets/brick-ejection.mp4', type='video/mp4', alt='A video showing the brick being ejected from the press')
+  video.full-width(autoplay, loop, muted, playsinline)
+    source.full-width(src='/assets/brick-ejection.webm', type='video/webm', alt='A video showing the brick being ejected from the press')
+    source.full-width(src='/assets/brick-ejection.mp4', type='video/mp4', alt='A video showing the brick being ejected from the press')
   p ARC bricks are shaped such that they can be compressed on the exposed faces and therefore, hold tight dimensional tolerances in the sensitive top face, bottom face, and side faces along the wall. The tight tolerances allow walls to be created without the need for mortar, reducing the cement needed for a single-room dwelling by half. 
 
 .item
   +title('oceanus', 'Oceanus Auto', 'MIT Dept. of Ocean Engineering')
   .tag.project
-  iframe.hero.lazyload(width='100%', height='338',src="https://www.youtube.com/embed/PzJDktltEWs",frameborder="0",allow="autoplay; encrypted-media",allowfullscreen, title='Video about the Oceanus Auto project')
+  iframe.full-width.lazyload(width='100%', height='338',src="https://www.youtube.com/embed/PzJDktltEWs",frameborder="0",allow="autoplay; encrypted-media",allowfullscreen, title='Video about the Oceanus Auto project')
   p Oceanus Auto was a project to design a wind-powered autonomous boat to cross the Atlantic Ocean. Our team of 8 designed and then built an 8ft #[+link('https://en.wikipedia.org/wiki/Small-waterplane-area_twin_hull', 'SWATH')] prototype to demonstrate the concept. The SWATH design reduces the craft's succeptibility to surface chop and is self-righting. Additionally, the vertical-axis wind turbine reduces the broad-side surface area of the boat, reducing the vulnerability to large waves in storm conditions. The craft features a controllable-pitch propeller which simplifies maneuvers, enables robust station-keeping, and is straightforward to build robustly.
   p In the prototype the main shaft bearing has been replaced with a much cheaper teflon bushing and the wind turbine is 1/2 scale in order to stay under our $10k budget. The prototype and design was enough to win $50k in additional funding for the project.
 
 .item
   +title('infocycle', 'InfoCycle', 'Ford Motor Company')
   .tag.project
-  img.hero.lazyload(data-src='/assets/infocycle.webp', alt='The InfoCycle sensor box on a bike fork')
+  img.full-width.lazyload(data-src='/assets/infocycle.webp', alt='The InfoCycle sensor box on a bike fork')
   p The InfoCycle is a fork-mounted bicycle sensor that collects information about cyclists, congestion, and road conditions which can then be used to inform other cyclists, drivers, and city planners about mobility within a city. A central goal of the project was to exclusively use off-the-shelf components and hobby-grade 3D printing in order to make the design accessible to individuals. #[+link('https://media.ford.com/content/fordmedia/fna/us/en/news/2015/01/06/mobility-experiment-info-cycle-palo-alto-california.html', 'Press release')]
