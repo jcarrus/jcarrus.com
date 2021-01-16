@@ -1,0 +1,31 @@
+include /_utils
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='description', content='Justin Carrus\'s Personal Website')
+    title Justin Carrus | Intro to Hacking
+    link(rel='stylesheet', href='/style.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;700&display=swap')
+  body
+    main.page
+      a.sans.nostyle(href='/', title="Go Home") Justin Carrus
+      h1.center On Hacking...
+      p Of late I've started learning about hacking, or rather, I've started learning about common security vulnerabilities. I've put together this page as a way to keep track of all of the resources I've found online and to organize what I've learned. If you're here, I hope you find this helpful!
+      .section
+        h2 Top Level Resources
+        p Some great high level resources are:
+        ul
+          li #[+link('https://www.hacker101.com/', 'Hacker 101')]: A great introductory site with a fun Capture the Flag (CTF) game.
+    script(async src="https://www.googletagmanager.com/gtag/js?id=UA-43008439-4")
+    script(src='/lazysizes.min.js' async)
+    script
+      | window.dataLayer = window.dataLayer || [];
+      | function gtag(){dataLayer.push(arguments);}
+      | if (window.location.protocol === 'https:') {
+      |   gtag('js', new Date());
+      |   gtag('config', 'UA-43008439-4');
+      | }
