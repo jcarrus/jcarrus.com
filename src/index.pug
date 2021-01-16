@@ -114,11 +114,12 @@ html(lang='en')
       | }
       |
       | window.onload = () => {
-      |   if (window.location.search === '') return
-      |   const params = new URLSearchParams(window.location.search)
-      |   document.getElementById('filterText').value = params.get('filter')
-      |   const tags = params.get('tags')
-      |   tags && tags.split(',').forEach(t => document.getElementById(t).classList.add('active'))
-      |   filter()
+      |   if (window.location.search !== '') {
+      |     const params = new URLSearchParams(window.location.search)
+      |     document.getElementById('filterText').value = params.get('filter')
+      |     const tags = params.get('tags')
+      |     tags && tags.split(',').forEach(t => document.getElementById(t).classList.add('active'))
+      |     filter()
+      |   }
       |   document.getElementById('content').classList.remove('hidden')
       | }
