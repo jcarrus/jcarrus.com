@@ -8,6 +8,7 @@
     "serve": "http-server dist/",
     "watch": "nodemon -w ./src/ -e pug,sass -x 'npm run build && npm run serve'",
     "publish": "aws --profile=mojo s3 sync ./dist s3://www.jcarrus.com --delete"
+    "invalidate": "aws --profile=mojo cloudfront create-invalidation --distribution-id E5T5X67T0T5CH --paths '/index.html' '/style.css'"
   },
   "repository": {
     "type": "git",
