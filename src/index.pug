@@ -32,7 +32,7 @@ html(lang='en')
           +chip('writing', 'Writing')
           +chip('history', 'History')
           +chip('youtube', 'Youtube')
-      #content.hidden
+      #content
         .section
           h2#projects Projects
           div
@@ -120,5 +120,4 @@ html(lang='en')
       |     tags && tags.split(',').forEach(t => document.getElementById(t).classList.add('active'))
       |     filter()
       |   }
-      |   document.getElementById('content').classList.remove('hidden')
       | }

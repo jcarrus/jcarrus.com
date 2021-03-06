@@ -3,7 +3,7 @@ mixin chip(id, displayText)
 
 mixin title(id, title, author)
   h3.title(id=id)= title
-    span.clip(data-clipboard-text=`https://jcarrus.com/#${id}`)
+    span.clip(data-clipboard-text=`https://www.jcarrus.com/#${id}`)
       img.icon(src='/assets/link.svg', onclick=`copyHandler('${id}')`, title='Copy a link to this item', alt='Link icon to copy a link to this item')
       span.copy-alert.hidden(id=`${id}-copy-alert`) Copied!
   if author
