@@ -1,0 +1,40 @@
+doctype html
+html(lang='en')
+  head
+    title Scratch
+    style
+      | html {
+      |   height: 100%
+      | }
+      | body {
+      |   font-family: monospace;
+      |   font-size: 1rem;
+      |   min-height: 100%;
+      |   margin: 0;
+      | }
+      | #content {
+      |   padding: 1rem;
+      |   outline: none;
+      | }
+  body
+    #content(contenteditable) 
+    script
+      | const text = localStorage.getItem('text') ?? '';
+      | const e = document.getElementById('content');
+      | e.innerHTML = localStorage.getItem('text');
+      | e.addEventListener('DOMSubtreeModified', () => localStorage.setItem('text', e.innerHTML));
+      |
+      | const focusToEnd = () => {
+      |   const range = document.createRange();
+      |   const selection = window.getSelection();
+      |   const child = e.childNodes[e.childNodes.length - 1]
+      |   range.setStart(child ?? e, child ? 1 : 0);
+      |   selection.removeAllRanges();
+      |   selection.addRange(range);
+      |   e.focus();
+      | }
+      |
+      | e.addEventListener('click', e => e.stopPropagation())
+      | document.body.onclick = focusToEnd;
+      |
+      | focusToEnd();

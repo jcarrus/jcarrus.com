@@ -13,7 +13,7 @@
     "serve": "live-server --no-css-inject dist/",
     "watch": "npm run sass:watch & npm run pug:watch & npm run serve",
     "publish": "aws --profile=mojo s3 sync ./dist s3://www.jcarrus.com --delete",
-    "invalidate": "aws --profile=mojo cloudfront create-invalidation --distribution-id E5T5X67T0T5CH --paths '/index.html' '/style.css'"
+    "invalidate": "aws --profile=mojo cloudfront create-invalidation --distribution-id E5T5X67T0T5CH --paths '/index.html' '/style.css' '/scratch.html"
   },
   "repository": {
     "type": "git",
