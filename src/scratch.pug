@@ -13,8 +13,11 @@ html(lang='en')
       |   margin: 0;
       | }
       | #content {
-      |   padding: 1rem;
+      |   height: calc(100vh - 2rem);
+      |   padding: 1rem 10%;
       |   outline: none;
+      |   display: flex;
+      |   flex-direction: column;
       | }
   body
     #content(contenteditable) 
@@ -22,7 +25,9 @@ html(lang='en')
       | const text = localStorage.getItem('text') ?? '';
       | const e = document.getElementById('content');
       | e.innerHTML = localStorage.getItem('text');
-      | e.addEventListener('DOMSubtreeModified', () => localStorage.setItem('text', e.innerHTML));
+      | e.addEventListener('DOMSubtreeModified', () => {
+      |   localStorage.setItem('text', d.innerHTML);
+      | });
       |
       | const focusToEnd = () => {
       |   const range = document.createRange();
